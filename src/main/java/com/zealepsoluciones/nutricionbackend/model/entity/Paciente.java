@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -21,8 +22,8 @@ public class Paciente extends Auditable {
     private String apellidos;
     private String sexo;
     private LocalDate fechaNacimiento;
-    private Double peso;
-    private Double talla;
+    private BigDecimal peso;
+    private BigDecimal talla;
 
 
     //relacion muchos a muchos con la tabla patologias

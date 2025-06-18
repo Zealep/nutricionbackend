@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Getter
@@ -30,16 +31,21 @@ public class Evaluacion extends Auditable{
     private Objetivo objetivo;
 
     private LocalDate fecha;
-    private Double peso;
-    private Double talla;
-    private Double imc;
-    private Double tasaMetabolicaBasal;
-    private Double porcentajeGrasaCorporal;
-    private Double gastoEnergeticoTotal;
-    private Double deficitCalorico;
-    private Double porcentajeProteina;
-    private Double porcentajeCarbohidratos;
-    private Double porcentajeGrasas;
+    private BigDecimal peso;
+    private BigDecimal talla;
+    private BigDecimal imc;
+    private BigDecimal circunfenciaCintura;
+    private BigDecimal circunfenciaCadera;
+    private BigDecimal relacionCinturaCadera;
+    private BigDecimal medidaCuello;
+    private BigDecimal masaMuscular;
+    private BigDecimal tasaMetabolicaBasal;
+    private BigDecimal porcentajeGrasaCorporal;
+    private BigDecimal gastoEnergeticoTotal;
+    private BigDecimal deficitCalorico;
+    private BigDecimal porcentajeProteina;
+    private BigDecimal porcentajeCarbohidratos;
+    private BigDecimal porcentajeGrasas;
     private String observaciones;
 
 }
