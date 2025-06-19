@@ -47,5 +47,6 @@ public class Evaluacion extends Auditable{
     private BigDecimal porcentajeCarbohidratos;
     private BigDecimal porcentajeGrasas;
     private String observaciones;
+    private Boolean activo;
 
 }
