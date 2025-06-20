@@ -22,9 +22,15 @@ public class Paciente extends Auditable {
     private String apellidos;
     private String sexo;
     private LocalDate fechaNacimiento;
+    private String estadoCivil;
+    private String numeroDocumento;
+    private String ocupacion;
+    String direccion;
+    private String celular;
+    private String correo;
+    private String actividadFisica;
     private BigDecimal peso;
     private BigDecimal talla;
-
 
     //relacion muchos a muchos con la tabla patologias
     @ManyToMany
@@ -34,6 +40,21 @@ public class Paciente extends Auditable {
         inverseJoinColumns = @JoinColumn(name = "patologia_id")
     )
     private List<Patologias> patologias;
+    //relacion muchos a muchos con la tabla patologias para familiar
+    @ManyToMany
+    @JoinTable(
+            name = "paciente_patologia_familiar",
+            joinColumns = @JoinColumn(name = "paciente_id"),
+            inverseJoinColumns = @JoinColumn(name = "patologia_id")
+    )
+    private List<Patologias> antecedentesPatologicosFamiliares;
+    @ManyToMany
+    @JoinTable(
+            name = "paciente_patologia_antecedente",
+            joinColumns = @JoinColumn(name = "paciente_id"),
+            inverseJoinColumns = @JoinColumn(name = "patologia_id")
+    )
+    private List<Patologias> antecedentesPatologicos;
     //relacion muchos a muchos con la tabla alergias
     @ManyToMany
     @JoinTable(
