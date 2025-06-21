@@ -31,6 +31,13 @@ public class Paciente extends Auditable {
     private String actividadFisica;
     private BigDecimal peso;
     private BigDecimal talla;
+    private String nivelEstres;
+    private String motivoEstres;
+    private String nivelCalidadSueño;
+    private String consumoAlcohol;
+    private String consumoTabaco;
+    private String consumoCafe;
+    private String consumoSuplementos;
 
     //relacion muchos a muchos con la tabla patologias
     @ManyToMany
